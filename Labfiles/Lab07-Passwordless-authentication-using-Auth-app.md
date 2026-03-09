@@ -7,6 +7,7 @@
 **Pre-requisities** - Install the Microsoft Authenticator app in mobile
 
 ## Overview 
+
 This lab focuses on setting up passwordless sign-in using the Microsoft Authenticator app. They'll enable passwordless phone sign-in authentication methods, configure sign-in methods for users, and validate the passwordless sign-in process. 
 
 ## Objectives
@@ -21,13 +22,9 @@ In this lab, you will glance through the following:
 
 In this task, you configure passwordless authentication by enabling the Microsoft Authenticator app for all users in Microsoft Entra ID.
 
-1. Sign in to https://entra.microsoft.com/.
+1. Navigate to the browser tab where you have **Microsoft Entra Admin Center** opened from previous labs.
 
-1. On the **Pick an account** page, select **<inject key="AzureAdUserEmail"></inject>**.
-
-1. On the **Enter password** page, enter the password **<inject key="AzureAdUserPassword"></inject>**.
-
-1. From the left navigation pane, browse to Protection > Authentication methods > Policies.
+1. From the left navigation pane, browse to **Protection > Authentication methods > Policies**.
 
 1. Select **Microsoft Authenticator**
 
@@ -45,7 +42,7 @@ In this task, you configure passwordless authentication by enabling the Microsof
 
 In this task, you configure sign-in methods for a user by adding the Microsoft Authenticator app as a sign-in method. This involves linking the app to the user's account by scanning a QR code and verifying the setup. 
 
-1. Navigate to https://portal.office.com using the credentials provided in the environment details page.
+1. Navigate to https://portal.office.com using the ODL_User credentials provided in the environment details page.
 
 1. Select the profile icon located at the top right corner and select **View account**.
 
@@ -89,19 +86,15 @@ In this task, you validate the passwordless sign-in by logging into the Azure po
 
 1. Once it is approved in the app, it will redirect to the home page of the azure portal without prompting for password.
 
-## Review
-In this lab, you have completed:
+## Summary
 
-- Enable passwordless phone sign-in authentication methods
-- Configure signin methods to the user
-- Enable Phone signin
-- Validate the passwordless signin
+In this lab, you have successfully set up passwordless sign-in using the Microsoft Authenticator app. You enabled passwordless phone sign-in authentication methods for all users in Microsoft Entra ID, configured the Microsoft Authenticator app as a sign-in method for a user, and validated the passwordless sign-in process by logging into the Azure portal without using a password. This enhances security by eliminating the reliance on passwords and leveraging multi-factor authentication through the Authenticator app.
 
 ## Conclusion
 
-Throughout this comprehensive Hybrid Identity lab series, you have successfully implemented a complete enterprise-scale identity management solution that seamlessly integrates on-premises Active Directory with Microsoft Entra ID. Starting with foundational hybrid identity setup and AD synchronization, you progressed through enabling self-service password reset with password writeback, implementing privileged access management with time-bound role assignments, establishing comprehensive monitoring and audit capabilities through Log Analytics, configuring adaptive security controls with conditional access and multi-factor authentication, managing access governance through recurring access reviews, and finally implementing modern passwordless authentication methods. This lab series has equipped you with the essential skills to architect, deploy, and manage a robust hybrid identity infrastructure that enhances security posture, ensures regulatory compliance, improves user experience, and scales effectively across enterprise environments. By combining on-premises governance with cloud-based identity services, conditional access policies, privileged identity management, comprehensive monitoring, and modern authentication methods, you have created a secure, compliant, and user-friendly identity solution capable of protecting organizational resources while enabling seamless access for legitimate users across both on-premises and cloud platforms.
+Throughout this comprehensive **Hybrid Identity with Entra ID lab** series, you have successfully implemented a complete enterprise-scale identity management solution that seamlessly integrates on-premises Active Directory with Microsoft Entra ID. Starting with foundational hybrid identity setup and AD synchronization, you progressed through enabling self-service password reset with password writeback, implementing privileged access management with time-bound role assignments, establishing comprehensive monitoring and audit capabilities through Log Analytics, configuring adaptive security controls with conditional access and multi-factor authentication, managing access governance through recurring access reviews, and finally implementing modern passwordless authentication methods. This lab series has equipped you with the essential skills to architect, deploy, and manage a robust hybrid identity infrastructure that enhances security posture, ensures regulatory compliance, improves user experience, and scales effectively across enterprise environments. By combining on-premises governance with cloud-based identity services, conditional access policies, privileged identity management, comprehensive monitoring, and modern authentication methods, you have created a secure, compliant, and user-friendly identity solution capable of protecting organizational resources while enabling seamless access for legitimate users across both on-premises and cloud platforms.
 
-## You have successfully completed the lab.
+### You have successfully completed the lab.
 
 
 

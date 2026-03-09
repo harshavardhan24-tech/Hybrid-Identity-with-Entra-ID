@@ -6,32 +6,38 @@
 This lab focuses on setting up a  Log Analytics workspace in Azure to store and analyze logs from Azure Arc-enabled machines. Configure diagnostic settings in Microsoft Entra ID to collect audit and sign-in logs, directing them to the created workspace.
 
 ## Objectives
+
 In this lab, you will perform the following:
 
 - Task 1: Create Log Analytics Workspace
 - Task 2: Add Diagnostic setting to collect audit logs
 - Task 3: Verify the logs in the workspace
 
-## Task 1 - Create Log Analytics Workspace
+### Task 1 - Create Log Analytics Workspace
 
 In this task, you will create a Log Analytics workspace for to store the log information and analysing the machines onboarded through Azure Arc.
 
-1. Sign in to https://portal.azure.com using below credentials.
+1. On your LabVM, open a new browser tab and login to **Azure Portal**, using the below URL: 
 
-    - Username : **<inject key="AzureAdUserEmail"></inject>**
-    - Password : **<inject key="AzureAdUserPassword"></inject>**
+   ```
+   https://portal.azure.com
+   ```
 
-1. In the Search bar of the Azure portal, type **Log Analytics**, then select **Log Analytics workspaces**.
+   >**Note:** Use the ODL credentials to login to Azure portal.
+   > - Username : **<inject key="AzureAdUserEmail"></inject>**
+   > - Password : **<inject key="AzureAdUserPassword"></inject>**
 
-1. Select **+ Create** from the command bar.
+1. In the Search bar of the Azure portal, type **Log Analytics workspace (1)**, then select **Log Analytics workspaces (2)**. Click on + **Create** to create a new workspace.
+
+   ![](../media/L4T1S2-0903.png)
     
 1. On the Create Log Analytics workspace page, add the below settings and click on **Review + Create (4)**.
 
       | Setting | Value|
       |----------|--------|
-      | Resource Group | **hybrid-rg** (1)|
-      | Name | **log-analytics<inject key="DeploymentID" enableCopy="false"/>**|
-      | Region | **East US** (3)|
+      | Resource Group | **hybrid-rg (1)**|
+      | Name | **log-analytics<inject key="DeploymentID" enableCopy="false"/> (2)**|
+      | Region | **East US (3)**|
 
    ![](../media/lab4-1.png)
 
@@ -46,51 +52,55 @@ In this task, you will create a Log Analytics workspace for to store the log inf
 
     <validation step="abc96da1-739e-47e8-a627-b36299a4f02b" />
 
-## Task 2 - Add Diagnostic setting to collect audit logs
+### Task 2 - Add Diagnostic setting to collect audit logs
 
-1. Navigate to Microsoft Entra ID, and select **Diagnostic settings** under Monitoring section.
+1. Once the workspace is created, click on **Go to resource** to navigate to the workspace.
 
-   ![](../media/lab4-3update.png)
+1. From the left navigation pane, select **Diagnostic settings (1)** under Monitoring section and click on **+ Add diagnistic setting (2)**.
 
-1. Click on **+Add diagnostic setting** and provide the below settings
+   ![](../media/L4T2S2-0903.png)
 
-   | Setting | Value |
-   -----------|---------
-   | Diagnostic setting name | **Logsinfo** |
-   |Logs | select **audit** and **allLogs** |
+1. Enter the following details:
 
-   ![](../media/lab4-4upd.png)
+   - Diagnostic setting name : **Logsinfo (1)**
+   - Check the box for **audit (2)** and **allLogs (3)**.
+   - Under **Destination details**, select the **Send to Log analytics checkbox (4)** and make sure that log analytics workspace which is created earlier is selected.
+   - Click on **Save (5)**.
+
+      ![](../media/L4T2S3-0903.png)
 
 1. On **Destination details**, select the **Send to Log analytics checkbox** and make sure that log analytics workspace which is created earlier is selected.
 
 1. Click on **Save**.
+
    >**Note**: Wait for about 15 mins for logs ingestion to happen and proceed with the next task.
 
-## Task 3 - Verify the logs in the workspace
+### Task 3 - Verify the logs in the workspace
+
+In this task, you will verify the logs collected in the Log Analytics workspace.
 
 1. Navigate to the **Log analytics workspace** and Select **Logs** from the general section of the pane.
 
 1. Close all the pop-ups until the query pane is visible.
 
-1. In the query pane, run the below queries, to view the activity data ingested into the workspace.
+1. Select the mode as **KQL mode (2)**, and in the query pane, run the below queries, to view the activity data ingested into the workspace.
 
       ```
        AuditLogs
       ```
-    ![](../media/lab4-5upd.png)
+      
+      ![](../media/L4T3S3-0903.png)
 
       ```
        SigninLogs
       ```
-    ![](../media/lab4-6upd.png)
+    
+      ![](../media/lab4-6upd.png)
 
-## Review
+## Summary
 
-In this lab , you have completed:
+In this lab, you have successfully created a Log Analytics workspace, configured diagnostic settings to collect audit and sign-in logs from Microsoft Entra ID, and verified the logs in the workspace. This setup is crucial for monitoring and auditing activities in your Azure environment, helping you maintain security and compliance effectively.
 
-- Created a Log Analytics Workspace for centralized log management.  
-- Added diagnostic settings to collect audit logs from resources.  
-- Verified the collected logs in the Log Analytics Workspace.
+#### You have successfully completed the lab. Click on Next >> to procced with next exercise.
 
-## You have successfully completed the lab. Click on Next >> to procced with next exercise.
    ![](../media/up4.png)
