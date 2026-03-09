@@ -1,6 +1,6 @@
 ## Lab 06 - Configuring passwordless sign-in using an authentication app (Read-Only)
 
-### Estimated Duration: 15 Minutes
+#### Estimated Duration: 15 Minutes
 
   >**Note**: During this Azure lab, you'll set up passwordless sign-in, which may involve registering personal mobile devices with Entra ID. We recommend following instructions provided and avoiding device registration unless necessary for learning objectives. Understand access implications within Azure.
 
