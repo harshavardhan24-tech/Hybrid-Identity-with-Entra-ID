@@ -67,18 +67,21 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
 
 ## Let's Get Started with Azure Portal
 
-1. On your virtual machine, click on the Azure Portal icon and sign in to the **Azure Portal** (<http://portal.azure.com>).
+1. On your Lab virtual machine, click on the **Azure Portal** icon to sign in to the Azure.
 
-1. On the **Sign in to Microsoft Azure** blade, you will see a login screen, in which enter the following email/username and then click on **Next**.  
+    ![](../media/signin0-0903.png)    
 
-   * **Azure Username/Email**:  <inject key="AzureAdUserEmail"></inject> 
-   * **Temperory Access Pass**:  <inject key="AzureAdUserPassword"></inject>
+1. On the Sign in blade, you will see a login screen, in which enter the following email/username and password and then click on Sign in.
+
+    * Azure Username/Email:  <inject key="AzureAdUserEmail"></inject>
+
+        ![](../media/signin1-0903.png)
+
+    * **Temperory Access Pass**:  <inject key="AzureAdUserPassword"></inject>
 
         **Note**: Refer to the **Environment** tab for any other lab credentials/details.
 
-    ![](../media/g1upd.jpg)
-  
-    ![](../media/g2upd.jpg)
+        ![](../media/signin2-0903.png)
   
 1. If you see the pop-up **Stay Signed in?** click **Yes**.
 

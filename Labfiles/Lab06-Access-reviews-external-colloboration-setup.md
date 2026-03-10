@@ -19,32 +19,35 @@ In this lab, you will perform the following:
 ## Exercise 1: Configure Access reviews
 
 ### Task 1: Create a group
+
 In this task, you will create a Microsoft 365 group named "All Users" in the Azure portal, assign ODL_User as the owner, and add specified members to the group.
 
-1. On the Azure portal, search and navigate to **Entra ID**
+1. On the Azure portal, search **(1)** and navigate to **Microsoft Entra ID (2)**
 
-1. Select **Groups (2)** under **Manage (1)**
+   ![](../media/L5E1T1S1-0903.png)
 
-   ![](../media/lab612upd.png)
+1. Select **Groups** under **Manage**
 
-1. Select **All Groups** and click on **+ New group**
+   ![](../media/L5E1T1S2-0903.png)
 
-   ![](../media/lab6-1upd.png)
+1. Select **All Groups (1)** and click on **+ New group (2)**
+
+   ![](../media/L5E1T1S3-0903.png)
 
 1. Create a group based on the below settings
 
    | Setting | Value |
    |----------|--------|
-   | Group type | Microsoft 365 |
-   | Group name | All Users |
-   | Group description | Similar access group |
-   | Microsoft Entra roles can be assigned to the group | yes |
-   | Owners | Click on **no owners selected** and select **ODL_User <inject key="DeploymentID" enableCopy="false"/>** from the list |
-   | Members | Click on **no members selected** and select **Allan**, **Jonis**, **Mirinda**, **Edmund** and also include **ODL_User <inject key="DeploymentID" enableCopy="false"/>** from the list |
+   | Group type | **Microsoft 365 (1)** |
+   | Group name | **All Users (2)** |
+   | Group description | **Similar access group (3)** |
+   | Microsoft Entra roles can be assigned to the group | **Yes (4)** |
+   | Owners | Click on **no owners selected** and select **ODL_User <inject key="DeploymentID" enableCopy="false"/> (5)** from the list |
+   | Members | Click on **no members selected** and select **Allan**, **Joni**, **Mirinda**, **Edmund** and also include **ODL_User <inject key="DeploymentID" enableCopy="false"/> (6)** from the list |
 
-   ![](../media/lab6-2.png)
+   ![](../media/L5E1T1S4-0903.png)
 
-1. Click on **Create** and select **Yes**
+1. Click on **Create (7)** and select **Yes**
    
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -59,64 +62,82 @@ In this task, you will configure an access review in Microsoft Entra ID to revie
 
 1. Navigate back to Overview page of **Microsoft Entra ID** then select **Identity governance** under **Manage** section .
 
-   ![](../media/idgov.png)
+   ![](../media/L5E1T2S1-0903.png)
 
-1. From the left navigation pane expand, select **Access reviews** and select **+ New access review**.
+1. From the left navigation pane expand **(1)**, select **Access reviews (2)** and select **+ New access review (3)**.
 
-   ![](../media/accrev.png)
+   ![](../media/L5E1T2S2-0903.png)
 
 1. On the **Choose an Access Review Template**, select **Review access to a resource type**
 
-   ![](../media/accrev2.png)
+   ![](../media/L5E1T2S3-0903.png)
 
-1. On **New access review** page, provide the below settings and Select **Next:Reviews**.
+1. On **New access review** page, provide the below settings and Select **Next:Reviews (7)**.
 
-   | Setting | Value |
-   |--------|------|
-   | Select what to review | Teams + Groups (1)|
-   | Review scope | select Teams + groups (2)|
-   | Groups | select **+ Select group(s)** link and search and select **All users** from the list (3)|
-   | Scope | All users (4)|
+   - Select what to review: **Teams + Groups (1)**
 
-   ![](../media/new-5-32.png)
+   - Review scope: **Select Teams + Groups (2)**
 
-   ![](../media/new-5-3.png)
+   - Group: Click on **+ Select groups (3)**
 
-1. On **Specify reviewers** enter the following and click on select **Next: Settings**
+   - Select the group **All Users (4)** that you created in the previous task and click on **Select (5)**.
 
-   | Setting | Value |
-   |--------|------|
-   | Select reviewers | Selected user(s) or group(s) |
-   | Users or groups | click **+ Select Reviewers** and select **ODL_USER <inject key="DeploymentID" enableCopy="false"/>** from the list |
-   | Review Recurrence | Monthly |
+   - Scope: **All users (6)**
 
-   ![](../media/new1-5-3.png)
+      ![](../media/L5E1T2S4.1-0903.png)
 
-1. On the **Settings** tab enter the following and select **Next: Review + Create**
+      ![](../media/L5E1T2S4.2-0903.png)
 
-   | Setting | Value |
-   |--------|------|
-   | Auto apply results to resource | Selected the checkbox |
-   | if reviewers dont respond | Take recommendation |
-   | At end of review, send notification to | click **+ Select User(s) or group(s)** and select **ODL_USER <inject key="DeploymentID" enableCopy="false"/>** from the list  |
+1. On **Reviews** tab enter the following and click on select **Next: Settings (4)**
 
-   ![](../media/new1-5-4.png)
+   - Select reviewers: **Select users or groups (1)**
+
+   - Users or Groups: Click **+ Select Reviewers** and select **ODL_User <inject key="DeploymentID" enableCopy="false"/> (2)** from the list.
+
+   - Review recurrence: **Monthly (3)**
+
+      ![](../media/L5E1T2S5-0903.png)
+
+1. On the **Settings** tab enter the following and select **Next: Review + Create (4)**
+
+   - Apply results to resource: **Check (1)**
+
+   - If reviewers don't respond: **Take recommendations (2)**
+
+   - At the end of review, send notifications to: **ODL_User <inject key="DeploymentID" enableCopy="false"/> (3)**
+
+      ![](../media/new1-5-4.png)
 
 1.  On the **Review + Create** tab enter **AccessreviewforAllusers** to the **Review name** and click **Create**.
 
      ![](../media/new1-5-5.png)
 
+1.  Wait for the access review status to become Active before proceeding to the next task. You can refresh the page to see the updated status.
+
+      ![](../media/L5E1T2S8-0903.png)
+
+      > **Note:** It may take a few minutes for the access review to become active.
+
 ### Task 3: Review access to groups and applications in access reviews
 
 In this task, you will review and manage user access to groups and applications through access reviews in the My Access portal. You will either manually assess and decide on user access or accept system-generated recommendations for managing permissions efficiently.
 
-1. Sign in to My Access at https://myaccess.microsoft.com/
-   
-1. On the **Pick an account** page, select **<inject key="AzureAdUserEmail"></inject>**.
+1. Open a new incognito window in Microsoft Edge and navigate to My Access using the below URL:
 
-1. Select **Access reviews** from the left menu to see a list of pending access reviews assigned to you.
+    ```
+    https://myaccess.microsoft.com
+    ```
 
-   ![](../media/new1-5-6upd.png)
+
+1. Sign in using the ODL_User credentials.
+
+   - Username : **<inject key="AzureAdUserEmail"></inject>**
+
+   - Password : **<inject key="AzureAdUserPassword"></inject>**  
+
+1. Select **Access reviews (1)** from the left menu to see a list of pending access reviews assigned to you **(2)**.
+
+   ![](../media/L5E1T3S2-0903.png)
 
 1. After you open My Access under Groups and Apps, you can see:
 
@@ -150,7 +171,7 @@ In this task, you will review and manage user access to groups and applications 
 
     - You can change your response at any time until the access review has ended. If you want to change your response, select the row and update the response. For example, you can approve a previously denied user or deny a previously approved user.
 
-      ![](../media/hybrid11upd.png)
+      ![](../media/L5E1T3S8-0903.png)
 
 1. **Review access based on recommendations** - Follow the below steps
 
@@ -166,7 +187,7 @@ In this task, you will review and manage user access to groups and applications 
 
     - Select Submit to accept the recommendations.
 
-      ![](../media/hybrid10.1.png)
+      ![](../media/L5E1T3S9-0903.png)
 
 ## Exercise 2: Configure external collaboration settings
 
@@ -174,34 +195,43 @@ In this task, you will review and manage user access to groups and applications 
 
 In this task, you'll configure settings to allow guest users to sign up for access on their own in Microsoft Entra by enabling the self-service sign-up feature.
 
-1. Sign in to the https://entra.microsoft.com
+1. Open a browser tab to sign in to the Microsoft Entra Admin Center using the below URL:
+
+   ```
+   https://entra.microsoft.com
+   ```
+
+   >**Note:** Use the ODL credentials to login to Microsoft Entra Admin Center.
+
+   > - Username : **<inject key="AzureAdUserEmail"></inject>**
+
+   > - Password : **<inject key="AzureAdUserPassword"></inject>**
 
 1. On the **Pick an account** page, select **<inject key="AzureAdUserEmail"></inject>**.
 
-1. Select **Users** under **Entra ID**.
+1. Select **Users (1)** under **Entra ID**.
 
-1. Open the **All users** menu item, then select **User Settings**. and select **Manage external user collaboration settings**.
+1. Select **User Settings (2)** then scroll down and select **Manage external user collaboration settings (3)**.
    
-    ![](../media/hybrid14.png)
+    ![](../media/L5E2T1S4-0903.png)
 
-1. Ensure that **YES** is marked for the setting Enable guest self-service sign up via user flows.
+1. Select **YES (1)** for the setting Enable guest self-service sign up via user flows and then click on **Save (2)** at the top of the screen.
 
-1. Select **Save** at the top of the screen.
+    ![](../media/L5E2T1S5-0903.png)
 
 ### Task 2 - Configure external collaboration settings
 
 In this task, you'll configure external collaboration settings by enabling email one-time passcode notifications, setting guest user access levels, specifying who can invite guest users, and configuring collaboration restrictions.
 
-1. From the left navigation pane, under **Entra ID** select **External Identities**, and then select **All identity providers**.
+1. From the left navigation pane, under **Entra ID** select **External Identities (1)**, and then select **All identity providers (2)**.
 
-1. Select the **Email one-time passcode** configured link.
+1. Select the **Email one-time passcode (3)** configured link.
 
-   ![](../media/new1-5-8.png)
+   ![](../media/L5E2T2S1-0903.png)
 
    >**Note:** A one-time passcode is a very secure way to invite a user to join your organization.
 
-1. Ensure that **Yes** is selected.
-1. Select **Save** if needed.
+1. Ensure that **Yes** is selected. If not, select **Yes** to enable email one-time passcode for guest users and then click on **Save**.
 
 1. Select **External Collaboration Settings** on the left navigation pane.
 
@@ -249,15 +279,8 @@ Screen image displaying guest user access restriction options
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-## Review
-In this lab, you have completed:
+## Summary
 
-- Configure Access reviews
-- Create a group
-- Configure access review
-- Review access to groups and applications in access reviews
-- Configure external collaboration settings
-- Enable Guest Users to perform self service sign-up
-- Configure external collaboration settings
+In this lab, you have successfully configured access reviews to manage user permissions for Teams and Groups, and set up external collaboration settings to control guest user access and invitations in Microsoft Entra ID. These configurations help enhance security and ensure proper access management within your organization.
 
-## You have successfully completed the lab.
+### You have successfully completed the lab.
