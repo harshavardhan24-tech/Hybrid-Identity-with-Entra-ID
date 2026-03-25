@@ -1,29 +1,35 @@
-# Getting Started with Hybrid Identity with Entra ID
-
-### Overall Estimated Duration: 2 Hours
-
+# Getting Started with Hybrid Identity: Access Reviews & External Collaboration
+ 
+#### Overall Estimated Duration: 1 Hour 30 Minutes
+ 
 ## Overview
-
-In this lab, you will explore the complete Hybrid Identity experience with Entra ID. You'll work through hands-on exercises designed to strengthen your organization's security posture by configuring passwordless authentication, access reviews, external collaboration, conditional access policies, monitoring, auditing, and Privileged Identity Management (PIM). You will also learn how to enable self-service password reset (SSPR) and seamlessly integrate on-premises Active Directory with Entra ID to implement a robust hybrid identity solution. Through guided steps and practical scenarios, this lab will equip you with the skills needed to secure and manage identities across both on-premises and cloud environments.
-
+ 
+In this lab, you will explore identity governance and secure external collaboration using **Microsoft Entra ID**. You'll work through hands-on exercises designed to strengthen your organization's security posture by configuring **access reviews** to manage and validate user permissions for Teams and Groups, and setting up **external collaboration settings** to control how guest users access your organization's resources. Additionally, you will explore how to implement **passwordless sign-in** using the Microsoft Authenticator app, eliminating password dependency and enhancing authentication security.
+ 
+Through guided steps and practical scenarios, this lab will equip you with the skills needed to govern identities, manage access lifecycle, and enable modern authentication methods across your Microsoft Entra ID environment.
+ 
 ## Objectives
-
-By completing this lab series, you will have comprehensive knowledge of designing, deploying, and managing a Hybrid Identity solution with Microsoft Entra ID for enterprise-scale adoption:
-
-- Configure Active Directory Domain Services and synchronize on-premises AD identities with Microsoft Entra ID using Entra Connect.
-- Enable self-service password reset with password writeback and validate synchronization across on-premises and cloud environments.
-- Assign Azure resource roles with Privileged Identity Management using time-bound, eligible assignments with approval workflows.
-- Create a Log Analytics Workspace and configure diagnostic settings to collect and analyze Entra ID audit and sign-in logs.
-- Create security groups, configure recurring access reviews, and set up external collaboration with guest user access controls.
-- Enable passwordless phone sign-in using Microsoft Authenticator app and validate authentication without passwords.
-
+ 
+By completing this lab, you will have practical knowledge of configuring identity governance and secure collaboration controls within **Microsoft Entra ID**:
+ 
+- Create a **Microsoft 365 group** and assign owners and members to establish an access review scope.
+- Configure **recurring access reviews** for Teams and Groups with automated reviewer assignment, monthly recurrence, and auto-apply settings.
+- Review and manage **user access** using the **My Access portal**, accepting system recommendations or making manual approve/deny decisions.
+- Enable **guest self-service sign-up** via user flows to allow external users to onboard independently.
+- Configure **external collaboration settings** including guest user access levels, guest invitation permissions, email one-time passcode authentication, and collaboration restrictions.
+- Enable **passwordless phone sign-in** using the **Microsoft Authenticator app** and validate the end-to-end passwordless authentication experience.
+ 
 ## Architecture
-
-- **Hybrid Identity Framework** integrates on-premises Active Directory with Microsoft Entra ID to enable enterprise-scale identity management and governance. **Active Directory Domain Services (AD DS)** serves as the on-premises identity foundation, managing users, groups, and resources within the corporate network. **Microsoft Entra Connect** facilitates seamless directory synchronization between on-premises AD and Microsoft Entra ID, enabling unified identity management across cloud and on-premises environments.
-
-- **Microsoft Entra ID** provides centralized cloud-based identity and access management, enforcing **security baselines, conditional access policies** to protect resources. **Privileged Identity Management (PIM)** manages and monitors privileged access through time-bound, approval-based role assignments, ensuring security and governance controls. **Log Analytics Workspace** and **Azure Monitor** collect and analyze audit logs, sign-in logs, and security events for compliance, threat detection, and operational insights.
-
-- **Access Reviews** and **Role-Based Access Control (RBAC)** establish governance controls, enabling regular access validation and least-privilege permissions. **External Collaboration Settings** and **Guest User Management** facilitate secure partner and vendor access with configurable invitation and access restrictions. **Passwordless Authentication** (Microsoft Authenticator app and phone sign-in) enhances security while improving user experience. **Self-Service Password Reset (SSPR)** with password writeback ensures users can manage credentials securely while maintaining synchronization between cloud and on-premises environments.
+ 
+The architecture for this lab is centered around **Microsoft Entra ID's identity governance and external identity capabilities**, working together to enforce least-privilege access and secure collaboration.
+ 
+**Access Reviews** operate within **Microsoft Entra Identity Governance**, enabling administrators to create scheduled review cycles for group memberships. The review workflow assigns designated reviewers — in this case the **ODL_User** — who evaluate user access through the **My Access portal**. Auto-apply settings ensure that review decisions are automatically enforced on the underlying resource (the **All Users** group), and recommendations based on sign-in activity help reviewers make informed decisions without manual investigation.
+ 
+**External Collaboration Settings** are managed through **Microsoft Entra External Identities**, which controls how guest users interact with the directory. **Email one-time passcode** authentication provides a secure, passwordless onboarding path for guests who do not have existing Microsoft accounts. **Guest user access restrictions** limit external users to their own directory objects, reducing exposure to internal directory data. **Guest invitation controls** define which internal users can invite external collaborators, ensuring governed and auditable onboarding.
+ 
+**Passwordless Authentication** is implemented through the **Microsoft Authenticator app** integrated with **Entra ID authentication methods policies**. The phone sign-in flow replaces password prompts with app-based approval, leveraging **multi-factor authentication** principles without requiring a password. The sign-in method is registered per user, and validation is performed end-to-end through the Azure portal sign-in experience.
+ 
+Together, these capabilities form a layered identity governance model — controlling who has access (access reviews), how external users collaborate (external collaboration settings), and how all users authenticate (passwordless sign-in) — aligned to a **Zero Trust** security posture.
 
 ## Explanation of Components
 
@@ -41,7 +47,7 @@ By completing this lab series, you will have comprehensive knowledge of designin
 
 Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
 
-![](../media/intropupd.png)
+![](../media/intropupd-06.png)
 
 ### Virtual Machine & Lab Guide
  
@@ -73,11 +79,11 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
 
 1. On the Sign in blade, you will see a login screen, in which enter the following email/username and password and then click on Sign in.
 
-    * **Azure Username/Email:**  <inject key="AzureAdUserEmail"></inject>
+    * Azure Username/Email:  <inject key="AzureAdUserEmail"></inject>
 
         ![](../media/signin1-0903.png)
 
-    * **Temporary Access Pass**:  <inject key="AzureAdUserPassword"></inject>
+    * **Temperory Access Pass**:  <inject key="AzureAdUserPassword"></inject>
 
         **Note**: Refer to the **Environment** tab for any other lab credentials/details.
 
