@@ -17,7 +17,7 @@ By completing this lab, you will gain a foundational understanding of designing,
 
 ## Architecture
 
-- **Hybrid Identity Framework** integrates on-premises Active Directory with Microsoft Entra ID to enable enterprise-scale identity management and governance. **Active Directory Domain Services (AD DS)** serves as the on-premises identity foundation, managing users, groups, and resources within the corporate network. **Microsoft Entra Connect** facilitates seamless directory synchronization between on-premises AD and Microsoft Entra ID, enabling unified identity management across cloud and on-premises environments.
+**Hybrid Identity Framework** integrates on-premises Active Directory with Microsoft Entra ID to enable enterprise-scale identity management and governance. **Active Directory Domain Services (AD DS)** serves as the on-premises identity foundation, managing users, groups, and resources within the corporate network. **Microsoft Entra Connect** facilitates seamless directory synchronization between on-premises AD and Microsoft Entra ID, enabling unified identity management across cloud and on-premises environments.
 
 ## Explanation of Components
 
