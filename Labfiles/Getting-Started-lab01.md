@@ -32,7 +32,7 @@ By completing this lab, you will gain a foundational understanding of designing,
 
 Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
 
-![](../media/intropupd.png)
+![](../media/intropupd-lab01.png)
 
 ### Virtual Machine & Lab Guide
  
@@ -42,7 +42,7 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
 
-![](../media/introp1upd.png)
+![](../media/introp1upd-lab01.png)
 
 ## Utilizing the Split Window Feature
  
@@ -60,7 +60,7 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
 
 1. On your Lab virtual machine, click on the **Azure Portal** icon to sign in to the Azure.
 
-    ![](../media/signin0-0903.png)    
+    ![](../media/signin0-0903-lab01.png)  
 
 1. On the Sign in blade, you will see a login screen, in which enter the following email/username and password and then click on Sign in.
 
