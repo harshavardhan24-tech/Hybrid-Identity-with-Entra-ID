@@ -39,7 +39,7 @@ By completing this lab, you will gain practical experience in implementing and v
 
 Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
 
-![](../media/intropupd.png)
+![](../media/intropupdlab02.png)
 
 ### Virtual Machine & Lab Guide
  
@@ -49,7 +49,7 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
 
-![](../media/introp1upd.png)
+![](../media/introp1updlab02.png)
 
 ## Utilizing the Split Window Feature
  
