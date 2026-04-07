@@ -46,13 +46,15 @@ In this task, you will create a Log Analytics workspace to store the log informa
    ![](../media/lab4-2.png)
 
     > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps
-    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+    > - Scroll down in the lab guide and hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
     > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
     > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
     <validation step="abc96da1-739e-47e8-a627-b36299a4f02b" />
 
 ### Task 2 - Add Diagnostic setting to collect audit logs
+
+In this task, you will configure diagnostic settings on log analytics workspace to collect audit and sign-in logs.
 
 1. Once the workspace is created, click on **Go to resource** to navigate to the workspace.
 
@@ -68,8 +70,6 @@ In this task, you will create a Log Analytics workspace to store the log informa
    - Click on **Save (5)**.
 
       ![](../media/L4T2S3-0903.png)
-
-1. On **Destination details**, select the **Send to Log analytics checkbox** and make sure that the log analytics workspace that was created earlier is selected.
 
 1. Click on **Save**.
 
