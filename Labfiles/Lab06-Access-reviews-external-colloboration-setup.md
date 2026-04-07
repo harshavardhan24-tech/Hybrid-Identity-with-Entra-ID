@@ -257,7 +257,7 @@ In this task, you will configure external collaboration settings by enabling ema
 
         ![](../media/new1-5-11.png)
 
-1. When finished, **ave** your changes.
+1. When finished, **Save** your changes.
 
 ## Summary
 
