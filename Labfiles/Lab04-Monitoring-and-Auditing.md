@@ -2,14 +2,15 @@
 
 #### Estimated Duration: 30 Minutes
 
-## Scenario
+## 📘 Lab Scenario
 
-Contoso Ltd. requires enhanced visibility into identity-related activities to meet security, auditing, and compliance requirements. As a Security Administrator, you will create a Log Analytics Workspace and configure Microsoft Entra ID diagnostic settings to collect audit and sign-in logs. You will then verify that the logs are successfully ingested and available for analysis, enabling the organization to monitor user activities, investigate security events, and support compliance reporting.
+Contoso Ltd. requires enhanced visibility into identity-related activities to meet **security, auditing, and compliance requirements**. As a Security Administrator, you will create a **Log Analytics Workspace** and configure Microsoft Entra ID diagnostic settings to collect **audit and sign-in logs**. You will then verify that the logs are successfully ingested and available for analysis, enabling the organization to **monitor** user activities, investigate security events, and support compliance reporting.
 
-## Overview 
+## 📖 Overview 
+
 This lab focuses on setting up a  Log Analytics workspace in Azure to store and analyze logs from Azure Arc-enabled machines. Configure diagnostic settings in Microsoft Entra ID to collect audit and sign-in logs, directing them to the created workspace.
 
-## Objectives
+## 🎯 Objectives
 
 In this lab, you will perform the following:
 
@@ -74,14 +75,14 @@ In this task, you will configure diagnostic settings on log analytics workspace 
 
 1. Enter the following details:
 
-   - Diagnostic setting name : **Logsinfo (1)**
+   - Diagnostic setting name : **Logsinfo<inject key="DeploymentID" enableCopy="false"/> (1)**
    - Check the box for **Auditlogs (2)** and **SignInLogs (3)** under catagories.
    - Under **Destination details**, select the **Send to Log analytics checkbox (4)** and make sure that the log analytics workspace that was created earlier is selected **(5)**.
    - Click on **Save (6)**.
 
       ![](../media/L4T2S3-0903-4.png)
 
-1. Once it is saved, open a New InPrivate window in Microsoft Edge and navigate to the Azure portal page using the following URL:
+1. Once it is saved, open a New **InPrivate** window in **Microsoft Edge** and navigate to the Azure portal page using the following URL:
 
     ```
     https://portal.azure.com/
@@ -115,7 +116,7 @@ In this task, you will verify the logs collected in the Log Analytics workspace.
 
 1. Select **Logs (1)** option in the left pane and close all the pop-ups until the query pane is visible.
 
-1. From the dropdown, select the mode as **KQL mode (2)**, and in the query pane, run the below queries, to view the activity data ingested into the workspace.
+1. From the dropdown, select the mode as **KQL mode (2)**, and in the query pane, paste the below queries **(3)** and click on **Run (4)**, to view the activity data ingested into the workspace.
 
       ```
        AuditLogs
@@ -128,12 +129,13 @@ In this task, you will verify the logs collected in the Log Analytics workspace.
       ```
     
       ![](../media/lab4-6.png)
-      >**Note**: It may take some time for the logs to be ingested into the Log Analytics workspace. If the results are not visible yet, you can verify them at the end of the lab. Meanwhile, please proceed with the next exercise.
 
-## Summary
+      >**Note: It may take some time for the logs to be ingested into the Log Analytics workspace. If the results are not visible yet, you can verify them at the end of the lab. Meanwhile, please proceed with the next exercise**.
+
+## 🧾 Summary
 
 In this lab, you have successfully created a Log Analytics workspace, configured diagnostic settings to collect audit and sign-in logs from Microsoft Entra ID, and verified the logs in the workspace. This setup is crucial for monitoring and auditing activities in your Azure environment, helping you maintain security and compliance effectively.
 
-#### You have successfully completed the lab. Click on Next >> to proceed with the next lab.
+### You have successfully completed the lab. Click on **Next >>** to proceed with the next lab.
 
    ![](../media/np5.png)

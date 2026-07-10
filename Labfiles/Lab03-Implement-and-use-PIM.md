@@ -2,15 +2,15 @@
 
 #### Estimated Duration: 30 Minutes
 
-## Scenario
+## 📘 Lab Scenario
 
-Contoso Ltd. is strengthening its security posture by implementing Privileged Identity Management (PIM) to control administrative access to critical resources. As an Identity Administrator, you will assign privileged roles using eligible, time-bound assignments and activate them only when required. You will also manage existing role assignments by updating or removing access as business needs change, ensuring that administrative privileges follow the principle of least privilege and are governed through just-in-time access controls.
+Contoso Ltd. is strengthening its security posture by implementing **Privileged Identity Management (PIM)** to control administrative access to critical resources. As an Identity Administrator, you will assign privileged roles using **eligible, time-bound assignments** and activate them only when required. You will also manage existing role assignments by updating or removing access as business needs change, ensuring that administrative privileges follow the principle of least privilege and are governed through **just-in-time access** controls.
 
-## Overview
+## 📖 Overview 
 
 This lab focuses on setting up the use of Microsoft Entra to assign Global Administrator roles to specified users with defined privileges and durations. Then, manage and update existing role assignments, transitioning them from eligible to active status as needed, with specified durations and justifications.
 
-## Objectives
+## 🎯 Objectives
 
 In this lab, you will perform the following:
 - Task 1: Assign Azure resource roles
@@ -26,10 +26,11 @@ In this task, you will assign the Global Administrator role to the users from Mi
     https://entra.microsoft.com
     ```
 
-   - Username : **<inject key="AzureAdUserEmail"></inject>**
-   - Password : **<inject key="AzureAdUserPassword"></inject>**
+   >**Note:** If prompted to sign in, enter **<inject key="AzureAdUserEmail"></inject>** and click **Next**.
 
-1. Search **(1)** for and then select **Microsoft Entra Privileged Identity Management (2)**.
+   > At the password prompt, enter **<inject key="AzureAdUserPassword"></inject>** and click **Sign in**.
+
+1. Search for **Microsoft Entra Privileged Identity Management (1)** and then select **Microsoft Entra Privileged Identity Management (2)**.
 
     ![](../media/L3T1S2.1-0903-1.png)
 
@@ -45,7 +46,7 @@ In this task, you will assign the Global Administrator role to the users from Mi
 
     ![](../media/lab3-3.png)
 
-1. In the **Add assignments** page, from the **Select role** dropdown, select **Global Administrator (1)**.
+1. In the **Add assignments** page, from the **Select role** dropdown, search and select **Global Administrator (1)**.
 
 1. Under **Select member(s),** select **No member selected (2)**.
 
@@ -105,10 +106,10 @@ In this task, you will update and remove an existing Entra role assignment as ne
   
        ![](../media/L3T2S7.1-0903.png)
 
-## Summary
+## 🧾 Summary
 
 In this lab, you have successfully assigned Azure resource roles with Privileged Identity Management using time-bound, eligible assignments with approval workflows. You have also updated and removed an existing Entra role assignment as needed.
 
-#### You have successfully completed the lab. Click on Next >> to proceed with the next lab.
+### You have successfully completed the lab. Click on **Next >>** to proceed with the next lab.
 
    ![](../media/np4.png)

@@ -1,18 +1,18 @@
 # Getting Started with Hybrid Identity with Entra ID
 
-#### Overall Estimated Duration: 4 Hours
+### Overall Estimated Duration: 4 Hours
 
-## Lab Scenario
+## 📘 Lab Scenario
 
-Contoso Ltd. is modernizing its identity infrastructure by adopting a Hybrid Identity solution that integrates on-premises Active Directory Domain Services (AD DS) with Microsoft Entra ID. As a Hybrid Identity Administrator, you will configure identity synchronization using Microsoft Entra Connect, enable Self-Service Password Reset (SSPR) with password writeback, implement Privileged Identity Management (PIM) for secure role assignments, configure monitoring and auditing through Azure Monitor and Log Analytics, and establish governance controls using Access Reviews and external collaboration settings. By the end of this lab, you will have deployed a secure, scalable, and well-governed hybrid identity environment that supports both on-premises and cloud resources.
+Contoso Ltd. is modernizing its identity infrastructure by adopting a **Hybrid Identity** solution that integrates on-premises Active Directory Domain Services (AD DS) with **Microsoft Entra ID**. As a Hybrid Identity Administrator, you will configure identity synchronization using **Microsoft Entra Connect**, enable **Self-Service Password Reset (SSPR)** with password writeback, implement **Privileged Identity Management (PIM)** for secure role assignments, configure monitoring and auditing through **Azure Monitor** and **Log Analytics workspace**, and establish governance controls using **Access Reviews** and **external collaboration settings**. By the end of this lab, you will have deployed a secure, scalable, and well-governed hybrid identity environment that supports both on-premises and cloud resources.
 
-## Lab Overview
+## 📖 Lab Overview
 
-In this lab, you will explore the complete Hybrid Identity experience with Entra ID. You will work through hands-on labs designed to strengthen your organization's security posture by configuring passwordless authentication, access reviews, external collaboration, conditional access policies, monitoring, auditing, and Privileged Identity Management (PIM). You will also learn how to enable self-service password reset (SSPR) and seamlessly integrate on-premises Active Directory with Entra ID to implement a robust hybrid identity solution. 
+In this lab, you will explore the complete Hybrid Identity experience with Entra ID. You will work through hands-on labs designed to strengthen your organization's security posture by configuring passwordless authentication, access reviews, external collaboration, conditional access policies, monitoring, auditing, and Privileged Identity Management (PIM). You will also learn how to enable Self-Service Password Reset (SSPR) and seamlessly integrate on-premises Active Directory with Entra ID to implement a robust hybrid identity solution.
 
 Through guided steps and practical scenarios, this lab will equip you with the skills needed to secure and manage identities across both on-premises and cloud environments.
 
-## Lab Objectives
+## 🎯 Lab Objectives
 
 By completing this lab series, you will have comprehensive knowledge of designing, deploying, and managing a **Hybrid Identity** solution with **Microsoft Entra ID** for enterprise-scale adoption:
 
@@ -22,7 +22,21 @@ By completing this lab series, you will have comprehensive knowledge of designin
 - Create a **Log Analytics Workspace** and configure **diagnostic settings** to collect and analyze **Entra ID audit and sign-in logs**.
 - Create **security groups**, configure **recurring access reviews**, and set up **external collaboration** with **guest user access controls**.
 
-## Architecture Explaination
+## ⚙️ Prerequisites
+
+Before starting this lab, you should have:
+
+- A basic understanding of Microsoft Entra ID and Hybrid Identity concepts.
+- Familiarity with the Azure portal and Microsoft Entra admin center.
+- Basic knowledge of identity synchronization, Self-Service Password Reset (SSPR), and Privileged Identity Management (PIM) concepts.
+
+The following prerequisites are already configured in this lab environment:
+
+- An active Microsoft Entra ID tenant.
+- A user account assigned with Global Administrator role.
+- A Microsoft Entra ID P2 license assigned to the user account.
+
+## 🏗️ Architecture Explaination
 
 - **Hybrid Identity Framework** integrates on-premises Active Directory with Microsoft Entra ID to enable enterprise-scale identity management and governance. **Active Directory Domain Services (AD DS)** serves as the on-premises identity foundation, managing users, groups, and resources within the corporate network. **Microsoft Entra Connect** facilitates seamless directory synchronization between on-premises AD and Microsoft Entra ID, enabling unified identity management across cloud and on-premises environments.
 
@@ -30,11 +44,11 @@ By completing this lab series, you will have comprehensive knowledge of designin
 
 - **Access Reviews** and **Role-Based Access Control (RBAC)** establish governance controls, enabling regular access validation and least-privilege permissions. **External Collaboration Settings** and **Guest User Management** facilitate secure partner and vendor access with configurable invitation and access restrictions. **Self-Service Password Reset (SSPR)** with password writeback ensures users can manage credentials securely while maintaining synchronization between cloud and on-premises environments.
 
-## Architecture Diagram
+## 🖼️ Architecture Diagram
 
 ![](../media/hybrid-identity-arch-diag-1303.png)
 
-## Explanation of Components
+## 🔍 Explanation of Components
 
 - **Microsoft Entra ID:** Microsoft Entra ID is a cloud-based identity and access management service that provides single sign-on (SSO), multi-factor authentication (MFA), and conditional access capabilities. It serves as the central identity provider for cloud and hybrid environments, enabling organizations to authenticate users, manage application access, and enforce security policies across the organization.
 
@@ -50,7 +64,7 @@ By completing this lab series, you will have comprehensive knowledge of designin
 
 - **Privileged Identity Management (PIM):** Microsoft Entra Privileged Identity Management provides just-in-time and time-bound privileged access to Azure resources, Microsoft Entra roles, and other critical services. PIM helps organizations minimize standing administrative privileges by requiring role activation, approval workflows, multifactor authentication, and justification before elevated permissions are granted. It also provides auditing and reporting capabilities to enhance security, compliance, and governance.
 
-## Getting Started with the Lab
+## 🚀 Getting Started with the Lab
 
 Welcome to your Hybrid Identity with Entra ID workshop! In this lab, you will explore how to integrate on-premises Active Directory Domain Services (AD DS) with Microsoft Entra ID to build a secure hybrid identity solution. You will gain hands-on experience with identity synchronization, Self-Service Password Reset (SSPR), Privileged Identity Management (PIM), monitoring and auditing, and governance controls to securely manage identities and access across both on-premises and cloud environments.
 
@@ -120,7 +134,7 @@ Use the **slider (three vertical dots)** located between the **Virtual Machine**
 
     ![](../media/g4.jpg)
 
-## Support Contact
+## 📞 Support Contact
 
 The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
 

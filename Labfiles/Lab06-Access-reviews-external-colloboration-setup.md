@@ -2,15 +2,15 @@
 
 #### Estimated Duration: 60 Minutes
 
-## Scenario
+## 📘 Lab Scenario
 
-Contoso Ltd. wants to strengthen identity governance and securely collaborate with external partners. As an Identity Governance Administrator, you will create groups and configure access reviews to regularly validate user access and ensure that permissions remain appropriate over time. Additionally, you will enable guest user self-service sign-up and configure external collaboration settings to provide secure access for external users while maintaining organizational security and compliance requirements.
+Contoso Ltd. wants to strengthen identity governance and securely **collaborate with external partners**. As an Identity Governance Administrator, you will create groups and **configure access reviews** to regularly validate user access and ensure that permissions remain appropriate over time. Additionally, you will enable **guest user self-service sign-up** and configure external collaboration settings to provide **secure access for external users** while maintaining organizational security and compliance requirements.
 
-## Overview 
+## 📖 Overview 
 
 This lab focuses on setting up access reviews to ensure proper management of user permissions within Microsoft Entra ID, enhancing security and compliance. By creating groups and configuring access reviews, administrators can regularly monitor and adjust user access to Teams and Groups, optimizing resource allocation while minimizing security risks.
 
-## Objectives
+## 🎯 Objectives
 
 In this lab, you will perform the following:
 - Exercise 1: Configure Access reviews
@@ -27,7 +27,7 @@ In this lab, you will perform the following:
 
 In this task, you will create a Microsoft 365 group named **All Users** in the Azure portal, assign ODL_User as the owner, and add specified members to the group.
 
-1. On the **Azure portal**, search **(1)** and navigate to **Microsoft Entra ID (2)**
+1. On the **Azure portal**, search for **Microsoft Entra ID (1)** and navigate to **Microsoft Entra ID (2)**
 
    ![](../media/L5E1T1S1-0903.png)
 
@@ -43,7 +43,7 @@ In this task, you will create a Microsoft 365 group named **All Users** in the A
 
    | Setting | Value |
    |----------|--------|
-   | Group type | **Microsoft 365 (1)**|
+   | Group type | **Microsoft 365 (1)** from the drop down|
    | Group name | **All Users (2)** |
    | Group description | **Similar access group (3)** |
    | Microsoft Entra roles can be assigned to the group | **Yes (4)** |
@@ -79,7 +79,7 @@ In this task, you will configure an access review in Microsoft Entra ID to revie
 
 1. On **New access review** page, provide the below settings and Select **Next: Reviews (7)**.
 
-   - Select what to review: **Teams + Groups (1)**
+   - Select what to review: **Teams + Groups (1)** from the drop down
    - Review scope: **Select Teams + Groups (2)**
    - Group: Click on **+ Select groups (3)**
    - Select the group **All Users (4)** that you created in the previous task and click on **Select (5)**.
@@ -91,21 +91,21 @@ In this task, you will configure an access review in Microsoft Entra ID to revie
 
 1. On **Reviews** tab, enter the following and click on select **Next: Settings (4)**
 
-   - Select reviewers: **Selected user(s) or group(s) (1)**
+   - Select reviewers: **Selected user(s) or group(s) (1)** from the drop down
    - Users or Groups: Click **+ Select Reviewers** and select **ODL_User <inject key="DeploymentID" enableCopy="false"/> (2)** from the list.
-   - Review recurrence: **Monthly (3)**
+   - Review recurrence: **Monthly (3)** from the drop down
 
       ![](../media/L5E1T2S5-0903.png)
 
 1. On the **Settings** tab enter the following and select **Next: Review + Create (4)**
 
    - Auto apply results to resource: **Check (1)**
-   - If reviewers don't respond: **Take recommendations (2)**
+   - If reviewers don't respond: **Take recommendations (2)** from the drop down
    - At the end of review, send notifications to: Click **+ Select User(s) or Group(s)** and select **ODL_User <inject key="DeploymentID" enableCopy="false"/> (3)**
 
       ![](../media/new1-5-4.png)
 
-1.  On the **Review + Create** tab enter **AccessreviewforAllusers (1)** to the **Review name (2)** and click **Create**.
+1.  On the **Review + Create** tab enter **AccessreviewforAllusers (1)** to the **Review name** box and click **Create (2)**.
 
      ![](../media/new1-5-5.png)
 
@@ -113,13 +113,13 @@ In this task, you will configure an access review in Microsoft Entra ID to revie
 
      ![](../media/L5E1T2S8-0903.png)
 
-   > **Note:** It may take a few minutes for the access review to become active. 
+   > **Note: It may take a few minutes for the access review to become active**. 
 
 ### Task 3: Review access to groups and applications in access reviews
 
 In this task, you will review and manage user access to groups and applications through access reviews in the My Access portal. You will either manually assess and decide on user access or accept system-generated recommendations for managing permissions efficiently.
 
-1. Open a new InPrivate window in Microsoft Edge and navigate to My Access using the below URL: 
+1. Open a new **InPrivate** window in **Microsoft Edge** and navigate to My Access using the below URL: 
 
    ```
    https://myaccess.microsoft.com/
@@ -156,13 +156,13 @@ In this task, you will review and manage user access to groups and applications 
 
     - Select one or more users by selecting the circle next to their names.
 
-    - Select Approve or Deny on the bar.
+    - Select **Approve** or **Deny** on the bar.
 
-    - If you're unsure if a user should continue to have access, you can select Don't know. The user gets to keep their access, and your choice is recorded in the audit logs. Keep in mind that any information you provide is available to other reviewers. They can read your comments and take them into account when they review the request.
+    - If you're unsure if a user should continue to have access, you can select **Don't know**. The user gets to keep their access, and your choice is recorded in the audit logs. Keep in mind that any information you provide is available to other reviewers. They can read your comments and take them into account when they review the request.
 
-    - The administrator of the access review might require you to supply a reason for your decision in the Reason box, even when a reason isn't required. You can still provide a reason for your decision. The information that you include is available to other approvers for review.
+    - The administrator of the access review might require you to supply a **reason** for your decision in the Reason box, even when a reason isn't required. You can still provide a reason for your decision. The information that you include is available to other approvers for review.
 
-     - Select Submit.
+   - Select **Submit**.
 
     - You can change your response at any time until the access review has ended. If you want to change your response, select the row and update the response. For example, you can approve a previously denied user or deny a previously approved user.
 
@@ -198,8 +198,8 @@ In this task, you will configure settings to allow guest users to sign up for ac
 
 1. Sign in using the ODL credentials:
 
-   - Username: <inject key="AzureAdUserEmail"></inject> 
-   - Password: <inject key="AzureAdUserPassword"></inject>
+   - Username: **<inject key="AzureAdUserEmail"></inject>** 
+   - Password: **<inject key="AzureAdUserPassword"></inject>**
 
 1. Select **Users (1)** under **Entra ID**.
 
@@ -210,6 +210,8 @@ In this task, you will configure settings to allow guest users to sign up for ac
 1. Ensure that **Yes (1)** is selected. If not, select **Yes (1)** for the setting Enable guest self-service sign up via user flows and then click on **Save (2)** at the top of the screen.
 
     ![](../media/L5E2T1S5-0903.png)
+
+   >**Note**: If it already enabled, please continue to next step.
 
 ### Task 2: Configure external collaboration settings
 
@@ -263,7 +265,7 @@ In this task, you will configure external collaboration settings by enabling ema
 
 1. When finished, **Save** your changes.
 
-## Summary
+## 🧾 Summary
 
 In this lab, you have successfully configured access reviews to manage user permissions for Teams and Groups, and set up external collaboration settings to control guest user access and invitations in Microsoft Entra ID. These configurations help enhance security and ensure proper access management within your organisation.
 

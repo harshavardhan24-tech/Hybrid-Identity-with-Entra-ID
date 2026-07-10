@@ -1,16 +1,16 @@
 # Lab 01: Setup Hybrid Identity with On-Prem AD and Entra ID
 
-#### Estimated Duration: 60 Minutes
+### Estimated Duration: 60 Minutes
 
-## Scenario
+## 📘 Lab Scenario
 
-Contoso Ltd. is implementing a hybrid identity strategy to provide a unified authentication experience across its on-premises and cloud environments. As an Identity Administrator, you are responsible for setting up Active Directory Domain Services (AD DS), creating and managing users and groups in the domain, and configuring Microsoft Entra Connect to synchronize identities with Microsoft Entra ID. By completing this lab, you will establish a hybrid identity foundation that enables centralized identity management and seamless access to both on-premises and cloud resources.
+Contoso Ltd. is implementing a hybrid identity strategy to provide a unified authentication experience across its on-premises and cloud environments. As an Identity Administrator, you are responsible for setting up **Active Directory Domain Services (AD DS)**, creating and managing users and groups in the domain, and configuring **Microsoft Entra Connect** to **synchronize identities** with Microsoft Entra ID. By completing this lab, you will establish a hybrid identity foundation that enables centralized identity management and seamless access to both on-premises and cloud resources.
 
-## Overview 
+## 📖 Overview 
 
 This lab focuses on setting up a hybrid identity solution using on-premises Active Directory (AD) and Microsoft Entra ID. It guides users through the process of configuring Active Directory on a Windows Server, adding users/groups to the domain controller, and configuring directory synchronization with Microsoft Entra Connect to sync identities between on-premises AD and Microsoft Entra.
 
-## Objectives
+## 🎯 Objectives
 
 In this lab, you will perform the following:
 - Task 1: Active Directory Setup
@@ -60,6 +60,7 @@ In this task, you will set up Active Directory Domain Services on a Windows Serv
 1. The wizard will then begin installation. The time of installation depends on your machine’s hardware configuration and what features you have selected to be installed. Please make sure not to interrupt the installation. Once you get the message **Configuration required. Installation succeeded on labvm-<inject key="DeploymentID" enableCopy="false"/>**, click on **Close** button.
 
    ![](../media/ETS1110.png)
+
    >**Note:** The installation may take around 2-3 minutes to complete. 
   
 1. On the **Server Manager** dashboard, you should see a yellow triangle warning sign on the top right of the window near the menu bar. This sign appears only if Active Directory Domain Services was properly installed.
@@ -77,7 +78,7 @@ In this task, you will set up Active Directory Domain Services on a Windows Serv
 
 1. On the **Domain Controller Options** checkpoint, leave all the settings untouched and enter your desired password in the **Directory Services Restore Mode (DSRM) password** and **Confirm password** **(1)** textboxes. Then click **Next (2)**.
 
-   >**Note:** Make sure to keep a note of this password, as changing it later on is troublesome.
+   >**Note: Make sure to keep a note of this password, as changing it later on is troublesome**.
 
    ![](../media/ETS1115.png)
  
@@ -97,13 +98,13 @@ In this task, you will set up Active Directory Domain Services on a Windows Serv
 
    ![](../media/ETS1119.png)
 
-1. Next, head to the **Prerequisites Check** checkpoint. At this stage, you will see if all the prerequisite checks were completed. If not, then a list of errors will be displayed in the window. If there are any errors, you will need to go to the stated checkpoint and fix the errors. Once you have fixed all the errors, a green check mark with a success message will be displayed. Then click **Install** to begin the installation.
+1. Next, head to the **Prerequisites Check** checkpoint. At this stage, you will see if all the prerequisite checks were completed. If not, then a list of errors will be displayed in the window. If there are any errors, you will need to go to the stated checkpoint and fix the errors. Once you have fixed all the errors, a **green check mark** with a success message will be displayed. Then click **Install** to begin the installation.
 
    ![](../media/ETS1120.png)
 
 1. Once the installation is completed, your LabVM will automatically restart. 
 
-   >**Note**: Wait for 2-3 minutes and then click on "Reconnect" to connect to the LabVM.
+   >**Note: Wait for 2-3 minutes and then click on "Reconnect" to connect to the LabVM.**
 
 ### Task 2: Adding users or groups in your Domain Controller
 
@@ -119,7 +120,7 @@ In this task, you will add user accounts to the domain controller in Active Dire
 
    ![](../media/lab1-20.png)
 
-1. Enter the following to create the users listed below: 
+1. Create the following user accounts by repeating the procedure outlined in **next step**: 
 
       | Name           | User logon name                | Password   | 
       | -------------- | ------------------------ | ---------- |
@@ -154,7 +155,9 @@ In this task, you will configure directory synchronization between your on-premi
    https://entra.microsoft.com/#view/Microsoft_AAD_Connect_Provisioning/AADConnectMenuBlade/%7E/GetStarted
    ```
 
-   >**Note:** Log in with the credentials provided in the **Environment** tab if you are not logged in already. 
+   >**Note:** If prompted to sign in, enter **<inject key="AzureAdUserEmail"></inject>** and click **Next**.
+
+   > At the password prompt, enter **<inject key="AzureAdUserPassword"></inject>** and click **Sign in**.
 
 1. You will be navigated to **Microsoft Entra Connect** page, click on **Manage** 
 
@@ -163,6 +166,7 @@ In this task, you will configure directory synchronization between your on-premi
 1. Scroll down and click on **Download Connect Sync Agent** on the Manage tab. 
 
    ![](../media/L1T3S4-0903.png)
+
    >**Note**: Please make sure that you have clicked on the **Download Connect Sync Agent** option
 
 1. Click on **Accept terms & download**
@@ -211,7 +215,7 @@ In this task, you will configure directory synchronization between your on-premi
 
    ![](../media/lab1-31upd.png)
      
-   >**Note:** At this time, synchronization of objects from your local Active Directory Domain Services (AD DS) and Microsoft Entra  begins. You should wait approximately 10 minutes for this process to complete.
+   > **Note:** Synchronization between your local Active Directory Domain Services (AD DS) and Microsoft Entra ID begins at this stage. Wait approximately **10 minutes** for the synchronization to complete before proceeding to the next step.
 
 ### Task 4: Verify synchronization in Microsoft Entra
 
@@ -231,7 +235,7 @@ In this task, you will verify the synchronization of identities in Microsoft Ent
 
    ![](../media/L1T4S3-0903.png)
 
-1. On the **Active users** page, you should see the user accounts that you created in your on-premises Active Directory Domain Services (AD DS) environment. This confirms that synchronization between your on-premises AD and Microsoft Entra  was successful.
+1. On the **Active users** page, you should see the user accounts that you created in your on-premises Active Directory Domain Services (AD DS) environment. This confirms that synchronization between your on-premises AD and Microsoft Entra  was **successful**.
   
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps
 > - Scroll down in the lab guide and hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -240,9 +244,10 @@ In this task, you will verify the synchronization of identities in Microsoft Ent
 
 <validation step="ecb2747e-8d27-4fbc-9459-a9bb4a6d5171" />
 
-## Summary 
+## 🧾 Summary 
 
 In this lab, you have set up a hybrid identity solution by configuring on-premises Active Directory and synchronizing it with Microsoft Entra. You have successfully installed Active Directory Domain Services, created user accounts in the domain controller, configured directory synchronization using Microsoft Entra Connect, and verified the synchronization of identities in Microsoft Entra. This foundational setup enables seamless access to resources across both on-premises and cloud environments, providing a unified identity management experience.
 
-#### You have successfully completed the lab. Click on Next >> to proceed with the next lab.
+### You have successfully completed the lab. Click on **Next >>** to proceed with the next lab.
+
    ![](../media/np2.png)

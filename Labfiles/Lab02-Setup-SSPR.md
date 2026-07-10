@@ -1,16 +1,16 @@
 # Lab 02: Configuring Self-service password reset for user accounts in Entra ID
 
-#### Estimated Duration: 60 Minutes
+### Estimated Duration: 60 Minutes
 
-## Scenario
+## 📘 Lab Scenario
 
-Contoso Ltd. wants to reduce help desk workload and improve user productivity by enabling users to securely reset their own passwords. As an Identity Administrator, you will configure password writeback in Microsoft Entra Connect, update the on-premises password policy to support password resets, and enable Self-Service Password Reset (SSPR) in Microsoft Entra ID. You will then validate the solution by performing a password reset through the My Account portal and confirming that the password change is synchronized between Microsoft Entra ID and on-premises Active Directory.
+Contoso Ltd. wants to reduce help desk workload and improve user productivity by enabling users to securely reset their own passwords. As an Identity Administrator, you will configure **password writeback** in Microsoft Entra Connect, update the on-premises password policy to support password resets, and enable **Self-Service Password Reset (SSPR)** in Microsoft Entra ID. You will then validate the solution by performing a password reset through the My Account portal and confirming that the password change is synchronized between **Microsoft Entra ID** and **on-premises Active Directory**.
 
-## Overview 
+## 📖 Overview 
 
 This lab focuses on configuring Entra Connect with password writeback, updating the minimum password age policy to 0, enabling self-service password reset with authentication methods via Microsoft Entra Admin Center, and validating by changing a password via My Account page in Microsoft Edge.
 
-## Objectives
+## 🎯 Objectives
 
 In this lab, you will perform the following:
 - Task 1: Configure password writeback and Password minimum age policy. 
@@ -50,6 +50,8 @@ In this task, you will configure password writeback using Microsoft Entra Connec
 1. On the **Ready to configure** page, select **Configure**.
 
     ![](../media/lab2-6upd.png)
+    
+    >**Note:** The Configuration may take around 2-3 minutes to complete.
 
 1. When the configuration is completed, select **Exit**.
 
@@ -69,9 +71,9 @@ In this task, you will configure password writeback using Microsoft Entra Connec
 
     ![](../media/L2T1S12-0903.png)
 
-     >**Note**: Wait for 2-3 minutes and then click on "Reconnect" to connect to the LabVM.
+    >**Note**: Wait for 2-3 minutes and then click on **Reconnect** to connect to the LabVM.
 
-1. To verify if the policy is updated, search for **(1)** and select **Local Security Policy (2)** in the **Start** menu 
+1. To verify if the policy is updated, search for **Local Security Policy (1)** and select **Local Security Policy (2)** in the **Start** menu 
 
     ![](../media/lab2-9a.png)
 
@@ -99,7 +101,7 @@ In this task, you will enable self-service password reset for users in your tena
 
     ![](../media/lab2-t2.png)
     
-    >**Note**: If it already enabled, please continue to next step. If you encounter the error "Failed to save password reset policy – Unexpected error when saving password reset policy" while saving the configuration, please ignore the message and wait a few minutes before trying again. This issue may occur due to temporary backend synchronization or service delays. Retry the action after a short interval until the configuration is successfully applied
+    >**Note**: **If it already enabled, please continue to next step**. If you encounter the error **"Failed to save password reset policy – Unexpected error when saving password reset policy"** while saving the configuration, please **ignore** the message and wait a few minutes before trying again. This issue may occur due to **temporary backend synchronization** or **service delays**. **Retry the action after a short interval** until the configuration is **successfully applied**.
 
 1. On the **Password reset | Properties** blade, select **Authentication methods (1)**.
 
@@ -110,6 +112,8 @@ In this task, you will enable self-service password reset for users in your tena
 1. For the **Number of questions required to reset (5)**, select **3**. Click on select **No security questions configured (6)**.
 
     ![](../media/L2T2S9-0903.png)
+
+    >**Note**: **If these are already enabled, skip the step and continue from step 11**.
 
 1. In the **Select security questions** page, select **Predefined (1)**. Select three questions **(2)** of your choice, and then select **Ok (3)**.
 
@@ -129,13 +133,13 @@ In this task, you will enable self-service password reset for users in your tena
 
     ![](../media/L2T2S14-0903.png)
 
-    >**Note**: If it already enabled, please continue to next step
+    > **Note:** If it is **already enabled**, continue to the **next step**. If you see the error **"Unfortunately, it looks like we can't connect to your on-premises writeback client right now. Troubleshoot Microsoft Entra Connect to restore the connection,"** on the page, **ignore the message** and proceed to the **next step**. This issue may occur due to **temporary backend synchronization** or **service delays**.
 
 ### Task 3: Validate self-service password reset
 
 In this task, you will validate self-service password reset by changing the password via the My Account page.
 
-1. Open a New InPrivate window in Microsoft Edge and navigate to the My Account page using the following URL:
+1. Open a New **InPrivate** window in **Microsoft Edge** and navigate to the My Account page using the following URL:
 
     ```
     https://myaccount.microsoft.com/
@@ -149,7 +153,7 @@ In this task, you will validate self-service password reset by changing the pass
 
 1. On the **Enter password** page, enter **Pa55-w.rd!** or the password that you have entered and then select **Sign in**. 
 
-    > **Note**: If prompted with MFA, please follow the below steps or skip the steps and continue from step 13 if MFA is already enabled.
+    > **Note**: If prompted with MFA, please follow the below steps or skip the steps and continue from step 11 if MFA is already enabled.
 
 1. At the **Let's keep your account secure** prompt, select **Next** thrice
 
@@ -173,20 +177,22 @@ In this task, you will validate self-service password reset by changing the pass
 
     ![](../media/L2T3S4-0903.png)
 
-1. On the **Change your password** page, enter the following information and then select **Submit (3)**:
+1. On the **Change your password** page, enter the following information and then select **Submit (4)**:
 
-     - New password: **Pa55w.rd!1234 (1)**
-     - Confirm new password: **Pa55w.rd!1234 (2)**
+     - Current password: **Pa55w.rd! (1)**
+     - New password: **Pa55w.rd!1234 (2)**
+     - Confirm new password: **Pa55w.rd!1234 (3)**
 
-        ![](../media/L2T3S5-0903-1.png)
+        ![](../media/l2t4s101.png)
 
 1. On the Success, password changed window, click on **Done**.
 
 1. Once done, close the InPrivate window. 
 
-## Summary
+## 🧾 Summary
 
 In this lab, you have configured self-service password reset for user accounts in Entra ID. You enabled password writeback using Microsoft Entra Connect, updated the minimum password age policy to allow immediate password changes, and configured self-service password reset options, including authentication methods and registration requirements. Finally, you validated the self-service password reset process by successfully changing a user's password through the My Account page. This setup empowers users to manage their passwords securely and reduces the administrative overhead of password resets.
 
-#### You have successfully completed the lab. Click on Next >> to proceed with the next lab.
+### You have successfully completed the lab. Click on **Next >>** to proceed with the next lab.
+
    ![](../media/np3.png)
