@@ -2,15 +2,15 @@
 
 #### Estimated Duration: 60 Minutes
 
-## 📘 Lab Scenario
+## Lab Scenario
 
 Contoso Ltd. wants to strengthen identity governance and securely **collaborate with external partners**. As an Identity Governance Administrator, you will create groups and **configure access reviews** to regularly validate user access and ensure that permissions remain appropriate over time. Additionally, you will enable **guest user self-service sign-up** and configure external collaboration settings to provide **secure access for external users** while maintaining organizational security and compliance requirements.
 
-## 📖 Overview 
+## Overview 
 
 This lab focuses on setting up access reviews to ensure proper management of user permissions within Microsoft Entra ID, enhancing security and compliance. By creating groups and configuring access reviews, administrators can regularly monitor and adjust user access to Teams and Groups, optimizing resource allocation while minimizing security risks.
 
-## 🎯 Objectives
+## Objectives
 
 In this lab, you will perform the following:
 - Exercise 1: Configure Access reviews
@@ -265,7 +265,7 @@ In this task, you will configure external collaboration settings by enabling ema
 
 1. When finished, **Save** your changes.
 
-## 🧾 Summary
+## Summary
 
 In this lab, you have successfully configured access reviews to manage user permissions for Teams and Groups, and set up external collaboration settings to control guest user access and invitations in Microsoft Entra ID. These configurations help enhance security and ensure proper access management within your organisation.
 

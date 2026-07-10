@@ -2,15 +2,15 @@
 
 ### Estimated Duration: 60 Minutes
 
-## 📘 Lab Scenario
+## Lab Scenario
 
 Contoso Ltd. is implementing a hybrid identity strategy to provide a unified authentication experience across its on-premises and cloud environments. As an Identity Administrator, you are responsible for setting up **Active Directory Domain Services (AD DS)**, creating and managing users and groups in the domain, and configuring **Microsoft Entra Connect** to **synchronize identities** with Microsoft Entra ID. By completing this lab, you will establish a hybrid identity foundation that enables centralized identity management and seamless access to both on-premises and cloud resources.
 
-## 📖 Overview 
+## Overview 
 
 This lab focuses on setting up a hybrid identity solution using on-premises Active Directory (AD) and Microsoft Entra ID. It guides users through the process of configuring Active Directory on a Windows Server, adding users/groups to the domain controller, and configuring directory synchronization with Microsoft Entra Connect to sync identities between on-premises AD and Microsoft Entra.
 
-## 🎯 Objectives
+## Objectives
 
 In this lab, you will perform the following:
 - Task 1: Active Directory Setup
@@ -244,7 +244,7 @@ In this task, you will verify the synchronization of identities in Microsoft Ent
 
 <validation step="ecb2747e-8d27-4fbc-9459-a9bb4a6d5171" />
 
-## 🧾 Summary 
+## Summary 
 
 In this lab, you have set up a hybrid identity solution by configuring on-premises Active Directory and synchronizing it with Microsoft Entra. You have successfully installed Active Directory Domain Services, created user accounts in the domain controller, configured directory synchronization using Microsoft Entra Connect, and verified the synchronization of identities in Microsoft Entra. This foundational setup enables seamless access to resources across both on-premises and cloud environments, providing a unified identity management experience.
 

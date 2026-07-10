@@ -2,15 +2,15 @@
 
 #### Estimated Duration: 30 Minutes
 
-## 📘 Lab Scenario
+## Lab Scenario
 
 Contoso Ltd. is strengthening its security posture by implementing **Privileged Identity Management (PIM)** to control administrative access to critical resources. As an Identity Administrator, you will assign privileged roles using **eligible, time-bound assignments** and activate them only when required. You will also manage existing role assignments by updating or removing access as business needs change, ensuring that administrative privileges follow the principle of least privilege and are governed through **just-in-time access** controls.
 
-## 📖 Overview 
+## Overview 
 
 This lab focuses on setting up the use of Microsoft Entra to assign Global Administrator roles to specified users with defined privileges and durations. Then, manage and update existing role assignments, transitioning them from eligible to active status as needed, with specified durations and justifications.
 
-## 🎯 Objectives
+## Objectives
 
 In this lab, you will perform the following:
 - Task 1: Assign Azure resource roles
@@ -106,7 +106,7 @@ In this task, you will update and remove an existing Entra role assignment as ne
   
        ![](../media/L3T2S7.1-0903.png)
 
-## 🧾 Summary
+## Summary
 
 In this lab, you have successfully assigned Azure resource roles with Privileged Identity Management using time-bound, eligible assignments with approval workflows. You have also updated and removed an existing Entra role assignment as needed.
 
